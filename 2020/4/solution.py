@@ -18,7 +18,7 @@ results = {"valids": []}
 
 for line in inp:
     if line != '':
-        kv_strings=line.split()
+        kv_strings = line.split()
         for string in kv_strings:
             pair = string.split(':')
             fields.append(pair[0])
@@ -87,6 +87,7 @@ for p in v:
         continue
         
     hgt = p['hgt']
+
     if 'cm' not in hgt:
         if 'in' not in hgt:
             p.clear()
@@ -95,6 +96,7 @@ for p in v:
         if 'cm' not in hgt:
             p.clear()
             continue
+        
     if 'cm' in hgt:
         newhgt = re.split('(cm)', hgt)
         newhgt[0] = int(newhgt[0])
